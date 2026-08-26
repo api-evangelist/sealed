@@ -64,5 +64,18 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Sealed is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/sealed-stock
+Sealed is a New York climate-technology company (founded 2012) whose Sealed Pro platform helps
+home-improvement contractors sell, qualify and finance home weatherization and electrification
+projects — insulation, air sealing, heat pumps, heat-pump water heaters and smart thermostats.
+Sealed qualifies a project for utility and Inflation Reduction Act incentives at the point of sale,
+guarantees the contractor a minimum rebate, files the rebate paperwork, pays the contractor after
+installation, and carries the incentive-collection risk itself.
+
+**Sealed publishes no public API.** There is no developer portal, API reference, OpenAPI /
+AsyncAPI / GraphQL document, SDK, MCP server or A2A agent card. The only API-shaped surface found
+is the private, authenticated backend behind the Sealed Pro web application at `app.sealed.com`.
+See `x-coverage` in `apis.yml` for the probes and their HTTP statuses.
+
+- https://www.sealed.com/
+- https://www.sealed.com/contractors/
+- https://github.com/sealedinc

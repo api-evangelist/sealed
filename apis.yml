@@ -1,17 +1,37 @@
 aid: sealed
 name: Sealed
-description: 'Sealed is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Sealed is a New York-based climate technology company, founded in 2012,
+  whose Sealed Pro platform helps home-improvement contractors sell and finance home
+  weatherization and electrification projects — insulation, air sealing, heat pumps,
+  smart thermostats and heat-pump water heaters. Sealed pairs energy data and analytics
+  with a rebate and incentive engine that qualifies a project at the point of sale,
+  guarantees a minimum rebate amount, files the utility and Inflation Reduction Act
+  (HOMES / HEAR) paperwork on the contractor''s behalf, and pays the contractor after
+  installation while Sealed carries the incentive-collection risk. The company began
+  as a direct-to-consumer home energy retrofit provider with the first residential
+  energy-savings guarantee, and relaunched as Sealed Pro, a contractor-facing software
+  platform, working with utilities and state energy offices on measured- and
+  modeled-savings programs.'
 url: https://raw.githubusercontent.com/api-evangelist/sealed/refs/heads/main/apis.yml
+image: https://www.sealed.com/gcs/sealed-dev.appspot.com/web/sealed-logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Energy
+- Energy Efficiency
+- Climate Tech
+- Home Services
+- HVAC
+- Electrification
+- Rebates
+- Incentives
+- Contractors
+- Utilities
+- Weatherization
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/sealed-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/sealed-stock
+  url: https://www.sealed.com/
+- type: Blog
+  url: https://www.sealed.com/in-the-news/
+- type: PrivacyPolicy
+  url: https://www.sealed.com/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/sealedinc
+- type: Login
+  url: https://app.sealed.com/login
+- type: LinkedIn
+  url: https://www.linkedin.com/company/sealed
+- type: LLMsTxt
+  url: llms/sealed-llms.txt
+- type: Plans
+  url: plans/sealed-plans-pricing.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Sealed ships software (the Sealed Pro contractor platform) but only as an end-user
+    web application — the full 308-URL sitemap for www.sealed.com contains no developer,
+    API, docs or integration page, and the only API-shaped surface is the private
+    authenticated backend behind app.sealed.com whose paths under /api/ answer
+    {"detail":"Not Found"} with interactive docs disabled and no contract published.
+  evidence:
+  - url: https://www.sealed.com/developers
+    status: 404
+  - url: https://www.sealed.com/api-docs
+    status: 404
+  - url: https://www.sealed.com/openapi.json
+    status: 404
+  - url: https://www.sealed.com/llms.txt
+    status: 404
+  - url: https://app.sealed.com/api/docs
+    status: 404
+  - url: https://app.sealed.com/api/openapi.json
+    status: 404
+  - url: https://www.sealed.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.sealed.com/sitemap.xml
+    status: 200
+  checked: '2026-08-26'

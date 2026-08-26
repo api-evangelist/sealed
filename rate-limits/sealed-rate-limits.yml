@@ -1,0 +1,20 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.sealed.com/
+limit_count: 0
+note: >-
+  No rate limits are documented, because Sealed publishes no public API and no
+  developer documentation of any kind. Probes of www.sealed.com and app.sealed.com
+  for a developer portal, API reference, OpenAPI document or llms.txt all missed
+  (see x-coverage in apis.yml). The only API-shaped surface found is the private
+  backend behind the Sealed Pro application at app.sealed.com/api/, which is
+  first-party and authenticated; its limits, if any, are not published.
+rate_limits: []
+headers: []
+evidence:
+- url: https://www.sealed.com/developers
+  status: 404
+- url: https://www.sealed.com/api-docs
+  status: 404
+- url: https://app.sealed.com/api/docs
+  status: 404

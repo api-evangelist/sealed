@@ -1,0 +1,66 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTP probes of every Sealed host found in apis.yml (2026-08-26)
+hit_count: 0
+note: >-
+  Nothing is served on any /.well-known/ path on either Sealed host. www.sealed.com
+  (the WordPress marketing site) returns a real, consistent 404 page for every probe.
+  app.sealed.com (the Sealed Pro single-page application) is a catch-all: it answers
+  HTTP 200 with the same 546-byte SPA shell for EVERY path, including a deliberately
+  nonsensical control path, so none of its 200s is a document. No WellKnown or
+  SecurityTxt pointer is emitted — this file records an absence, not a presence.
+hosts:
+- host: https://www.sealed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/mcp.json
+    status: 404
+- host: https://app.sealed.com
+  soft_404_control:
+    path: /.well-known/this-path-does-not-exist-control-9f3
+    status: 200
+    bytes: 546
+    body: HTML SPA shell (<div id="app">), identical to every other 200 on this host
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: soft-200 SPA shell, not a document — same 546 bytes as the control
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: soft-200 SPA shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: soft-200 SPA shell, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    note: soft-200 SPA shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    note: soft-200 SPA shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: soft-200 SPA shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: soft-200 SPA shell, not a document — rejected, no agent card written
+  - path: /.well-known/agent.json
+    status: 200
+    note: soft-200 SPA shell, not a document — rejected, no agent card written
+  - path: /.well-known/mcp.json
+    status: 200
+    note: soft-200 SPA shell, not a document

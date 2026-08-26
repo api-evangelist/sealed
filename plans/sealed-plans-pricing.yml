@@ -1,0 +1,22 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.sealed.com/sitemap.xml
+plan_count: 0
+note: >-
+  Sealed publishes no plans, tiers or price list. The full 308-URL sitemap for
+  www.sealed.com contains no /pricing/ page, and the contractor and program pages
+  describe a commercial model rather than a rate card: Sealed Pro qualifies a
+  home-improvement project for utility and Inflation Reduction Act incentives at the
+  point of sale, guarantees the contractor a minimum rebate amount, pays the
+  contractor after installation, and collects the incentive itself — so Sealed is
+  compensated out of the rebate spread rather than by a subscription a buyer could
+  compare. Engagement runs through a "Get in touch" HubSpot form. There is no API
+  product and therefore no API pricing.
+plans: []
+evidence:
+- url: https://www.sealed.com/contractors/
+  status: 200
+- url: https://www.sealed.com/programs/
+  status: 200
+- url: https://www.sealed.com/sitemap.xml
+  status: 200
