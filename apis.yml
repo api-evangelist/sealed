@@ -13,6 +13,17 @@ description: 'Sealed is a New York-based climate technology company, founded in 
   platform, working with utilities and state energy offices on measured- and
   modeled-savings programs.'
 url: https://raw.githubusercontent.com/api-evangelist/sealed/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.sealed.com/gcs/sealed-dev.appspot.com/web/sealed-logo.svg
 x-type: company
 x-source: harvest:secondary-market
